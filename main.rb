@@ -1,5 +1,5 @@
 require "./game"
 
-@game = Game.new
+game = Game.new
 
-@game.play
+game.play
