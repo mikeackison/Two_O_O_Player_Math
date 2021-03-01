@@ -45,12 +45,16 @@ class Game
     @player1.lives <= 0 || @player2.lives <= 0
   end
 
+  # def final_score
+  #   if !@player1.is_alive?
+  #     winner(@player2)
+  #   elsif !@player2.is_alive?
+  #     winner(@player1)
+  #   end
+  # end
+
   def final_score
-    if !@player1.is_alive?
-      winner(@player2)
-    elsif !@player2.is_alive?
-      winner(@player1)
-    end
+    @player1.is_alive? ? winner(@player1) : winner(@player2)
   end
 
   def winner(player)
